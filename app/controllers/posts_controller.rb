@@ -18,6 +18,7 @@ class PostsController < ApplicationController
     @userid=@post.user_id         # 获取post对应的user_id
     @username=User.find(@userid)  # 获取user_id对应的username
 
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }

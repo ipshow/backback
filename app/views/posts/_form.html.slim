@@ -5,8 +5,9 @@
       ul
         - @post.errors.full_messages.each do |message|
           li = message
-
-  .field
-    = f.input :title,label: '主题',hint: 'You cannot change your username.'
-    = f.input :content,label: '内容', as: :text
-  .actions = f.button :submit, class: 'btn btn-primary'
+  .span2
+  .span8
+    .field
+      = f.input :title,label: false, placeholder: "Title", input_html: { class: 'span12' }
+      = f.input :content, as: :text, label: false, placeholder: "Share link,text,code,or images", input_html: { class: 'span12', rows: '16' }, hint: '支持 Markdown.'
+    .actions = f.button :submit, class: 'btn btn-primary'
