@@ -2,17 +2,21 @@ p#notice = notice
 
 
 
-h3
-  = @post.title
 
-p
+/p
   = @username.name
   = image_tag(@username.avatar)
 
+
+h3
+  = @post.title
+
+
 p
-  strong 正文:
   /解析html格式后输出
-  = @post.content.html_safe
+  /= @post.content.html_safe
+  /解析markdown并输出
+  = def_markdown(@post.content)
 
 
 

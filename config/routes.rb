@@ -1,4 +1,4 @@
-Rmd::Application.routes.draw do
+Pokerback::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

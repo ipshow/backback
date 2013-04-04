@@ -9,7 +9,8 @@ class Post
 
   belongs_to :user
   has_many :comments
-  validates_length_of :content, minimum: 6, maximum: 1000
+  validates_length_of :content, minimum: 6, maximum: 10000
   validates :user_id, presence: true
   validates :title, presence: true
+
 end

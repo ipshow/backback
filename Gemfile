@@ -1,5 +1,5 @@
 source 'http://ruby.taobao.org/'
-gem 'rails', '3.2.12'
+gem 'rails'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -26,4 +26,5 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'   # 上传组件
 gem 'simple_form'
 gem 'rails_kindeditor', '~> 0.3.11'
 gem 'mongoid_slug'
+gem 'redcarpet'
 

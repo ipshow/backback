@@ -15,7 +15,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module Rmd
+module Pokerback
   class Application < Rails::Application
 
     Mongoid.load!("config/mongoid1.yml")
