@@ -1,0 +1,12 @@
+= simple_form_for @post do |f|
+  - if @post.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+      ul
+        - @post.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.input :title,label: '主题',hint: 'You cannot change your username.'
+    = f.input :content,label: '内容', as: :text, :as => :kindeditor, :label => false, :input_html => { :simple_mode => true,:width => 640, :height => 300 }
+  .actions = f.button :submit, class: 'btn btn-primary'

@@ -1,0 +1,20 @@
+h1 Listing posts
+
+table
+  tr
+    th
+      h4 话题
+    th
+    th
+    th
+
+  - @posts.each do |post|
+    tr
+      td = post.title
+      td = link_to '详情', post
+      td = link_to '编辑', edit_post_path(post)
+      td = link_to '删除', post, class: 'btn-small btn-danger', :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to '新的话题', new_post_path
