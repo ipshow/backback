@@ -12,8 +12,9 @@ table
     tr
       td = post.title
       td = link_to '详情', post
-      td = link_to '编辑', edit_post_path(post)
-      td = link_to '删除', post, class: 'btn-small btn-danger', :confirm => 'Are you sure?', :method => :delete
+      - if user_signed_in? && current_user ==post.user    #如果是发贴人
+        td = link_to '编辑', edit_post_path(post)
+        td = link_to '删除', post, class: 'btn-small btn-danger', :confirm => 'Are you sure?', :method => :delete
 
 br
 

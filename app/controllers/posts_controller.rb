@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!   #验证用户状态
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]   #除 'index,show' 以外验证用户状态
+  before_filter :owns_post, only: [:edit, :update, :destroy]     #验证是否是发贴人
   # GET /posts
   # GET /posts.json
   def index
@@ -82,6 +83,12 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to posts_url }
       format.json { head :no_content }
+    end
+  end
+
+  def owns_post       #验证是否是发贴人
+    if !user_signed_in? || current_user != Post.find(params[:id]).user
+      redirect_to posts_path, error: "you can't do it"
     end
   end
 end
