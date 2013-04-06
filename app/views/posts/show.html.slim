@@ -7,39 +7,43 @@ p#notice = notice
   = @username.name
   = image_tag(@username.avatar)
 .span2
-  p
-    img src="#{@post.user.avatar}" class="img-circle"
-    = @post.user.name
 .span8
-  h3
-    = @post.title
-
-
-  p
-    /解析html格式后输出
-    /= @post.content.html_safe
-    /解析markdown并输出
-
-    = def_markdown(@post.content)
-
-    div class="about_footer"
-      = @post.user.bio
-
-
-
-  - @post.comments.each do |comment|
+  .post-single
     p
-      h4 Comment:
+      img class="avatar" src="#{@post.user.avatar}" class="img-circle"
+      = @post.user.name
+
+    h3
+      = @post.title
+
+
+    p
+      /解析html格式后输出
+      /= @post.content.html_safe
+      /解析markdown并输出
+      = def_markdown(@post.content)
+
+      div class="about_footer"
+        = @post.user.bio
+
+
+  .comments
+    - @post.comments.each do |comment|
       p
-      = def_markdown(comment.comment_content)
+        .span8
+          p
+          = def_markdown(comment.comment_content)
+        .span2
+          = comment.user.name
+          img class="avatar" src="#{comment.user.avatar}" class="img-circle"
 
-
-  p
-  h4 说点什么:
-  = simple_form_for([@post, @post.comments.build]) do |f|
-    .field
-      = f.input :comment_content, as: :text, label: false, placeholder: "说点什么吧", input_html: { class: 'span14', rows: '4' }, hint: '支持 Markdown.'
-    .actions = f.button :submit, class: 'btn btn-primary'
+  .add-comment
+    p
+    h4 说点什么:
+    = simple_form_for([@post, @post.comments.build]) do |f|
+      .field
+        = f.input :comment_content, as: :text, label: false, placeholder: "说点什么吧", input_html: { class: 'span14', rows: '4' }, hint: '支持 Markdown.'
+        .actions = f.button :submit, class: 'btn btn-primary'
 
 
   = link_to 'Edit', edit_post_path(@post)

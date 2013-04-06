@@ -29,6 +29,10 @@ textarea {
 h2 {
   font-size: 18px;
 }
+
+h3 {
+  font-size: 16px;
+}
 .about_footer {
   border-top:#e8e8e8 solid 1px;
   background:#f6f6f6;
@@ -37,4 +41,64 @@ h2 {
   -webkit-border-bottom-right-radius:6px;
   background:url(https://d3levm2kxut31z.cloudfront.net/assets/paper-texture-78e81f14f426b1043da12ae2e3894487.jpg) repeat;
   position:relative
+}
+
+.comments{
+  background:#343131;
+  padding-top:30px;
+  -webkit-border-bottom-left-radius:8px;
+  -webkit-border-bottom-right-radius:8px;
+  -moz-border-radius-bottomleft:8px;
+  -moz-border-radius-bottomright:8px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+  color: #fff;
+}
+
+.add-comment{
+  background:#262626
+  ;padding:30px 70px 70px 70px;
+  -webkit-border-bottom-left-radius:8px;
+  -webkit-border-bottom-right-radius:8px;
+  -moz-border-radius-bottomleft:8px;
+  -moz-border-radius-bottomright:8px
+  ;border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px
+}
+
+.add-comment textarea{
+  width:93.5%;
+  padding:3%;
+  min-height:120px;
+  resize:vertical;
+  font-size:1.4em;
+  line-height:1.6em;
+  margin-bottom:20px
+}
+
+img.avatar {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  width: 62px;
+  height: 62px;
+  float: left;
+  margin-left: -90px;
+}
+
+post-single {
+  background: #000;
+  color: #343131;
+  margin-bottom: 25px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  width: 630px;
+  min-height: 153px;
+  word-wrap: break-word;
 }

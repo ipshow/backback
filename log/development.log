@@ -19394,3 +19394,1180 @@ Processing by PostsController#show as HTML
   Rendered layouts/_navigation.slim (5.0ms)
   Rendered layouts/_messages.html.erb (0.0ms)
 Completed 200 OK in 163ms (Views: 157.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:00:15 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (873.0500ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (77.0042ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0007ms)
+  Rendered posts/show.html.slim within layouts/application (1039.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 1985ms (Views: 1980.1ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:00:46 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 36ms
+
+NoMethodError - undefined method `user' for nil:NilClass:
+  app/views/posts/show.html.slim:35:in `block in _app_views_posts_show_html_slim___104935503_38490852'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:636:in `yield_document'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:119:in `block (2 levels) in each'
+  (gem) moped-1.4.4/lib/moped/query.rb:77:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:118:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:615:in `selecting'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:117:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:166:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `each'
+  app/views/posts/show.html.slim:30:in `_app_views_posts_show_html_slim___104935503_38490852'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__84424012__process_action__618199482__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__504379102__call__58921171__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/39716688/variables" for 127.0.0.1 at 2013-04-06 14:00:47 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:00:57 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (7.0000ms)
+  Rendered posts/show.html.slim within layouts/application (31.0ms)
+Completed 500 Internal Server Error in 55ms
+
+NoMethodError - undefined method `user' for "scope 是什么意思？":String:
+  app/views/posts/show.html.slim:35:in `block in _app_views_posts_show_html_slim___104935503_38452584'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:636:in `yield_document'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:119:in `block (2 levels) in each'
+  (gem) moped-1.4.4/lib/moped/query.rb:77:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:118:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:615:in `selecting'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:117:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:166:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `each'
+  app/views/posts/show.html.slim:30:in `_app_views_posts_show_html_slim___104935503_38452584'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__84424012__process_action__618199482__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__504379102__call__58921171__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/39708504/variables" for 127.0.0.1 at 2013-04-06 14:00:58 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:01:09 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  Rendered posts/show.html.slim within layouts/application (45.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0011ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 145ms (Views: 140.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:01:30 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered posts/show.html.slim within layouts/application (42.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (3.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 129ms (Views: 124.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:02:25 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (47.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  Rendered layouts/_navigation.slim (7.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 217ms (Views: 209.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:03:09 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (71.0039ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (122.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 238ms (Views: 234.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:03:53 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (4.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered posts/show.html.slim within layouts/application (56.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 213ms (Views: 208.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:04:21 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (14.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (57.0030ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (108.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 214ms (Views: 198.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:04:39 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (59.0031ms)
+  Rendered posts/show.html.slim within layouts/application (106.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 201ms (Views: 197.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-04-06 14:05:01 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"THAzlLF1VCImnOkAih/Cf73U80w6kujdmJ0QAgsvXKU="}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-06 14:05:02 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.slim (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 92ms (Views: 91.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-04-06 14:05:09 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered f:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (54.0ms)
+  Rendered layouts/_navigation.slim (3.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 244ms (Views: 241.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-04-06 14:05:25 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u5RDEC+jWL/o+kIgUNFMa9iBy5verpXaZ5rEXWx2a54=", "user"=>{"email"=>"ipshow@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"email"=>"ipshow@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (211.0119ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=pokerback_development collection=users selector={"_id"=>"515fab4ef5a445c852000001"} update={"$set"=>{"bio"=>"", "current_sign_in_at"=>2013-04-06 06:05:26 UTC, "sign_in_count"=>2, "updated_at"=>2013-04-06 06:05:26 UTC}} flags=[] (1.0011ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 665ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-06 14:05:26 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.slim (1.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 97.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-06 14:05:30 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (77.0042ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0004ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/index.html.slim within layouts/application (91.0ms)
+  Rendered layouts/_navigation.slim (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 169ms (Views: 168.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:05:36 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (34.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 209ms (Views: 205.0ms)
+
+
+Started POST "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin/comments" for 127.0.0.1 at 2013-04-06 14:06:07 +0800
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u5RDEC+jWL/o+kIgUNFMa9iBy5verpXaZ5rEXWx2a54=", "comment"=>{"comment_content"=>"在城市生态环境面临严峻危机的背景下，生态城市是城市发展的时代要求 和必然趋势。随着生态城市建设的开展，需要推出许多新的规划编制要求、规 范、标准和指标，对传统的城市规划途径提出了挑战，迫切要求城市规划向生 态化转型。\r\n\r\n 本文对实现生态城市的规划途径进行了深入的探讨，并针对中国城市生态 环境的现状，结合中国城市规划体系，探索了实现中国生态城市的规划途径。"}, "commit"=>"Create Comment", "post_id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.0002ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pokerback_development collection=comments documents=[{"_id"=>"515fbb4ff5a4451bde000017", "comment_content"=>"在城市生态环境面临严峻危机的背景下，生态城市是城市发展的时代要求 和必然趋势。随着生态城市建设的开展，需要推出许多新的规划编制要求、规 范、标准和指标，对传统的城市规划途径提出了挑战，迫切要求城市规划向生 态化转型。\r\n\r\n 本文对实现生态城市的规划途径进行了深入的探讨，并针对中国城市生态 环境的现状，结合中国城市规划体系，探索了实现中国生态城市的规划途径。", "user_id"=>"515fab4ef5a445c852000001", "post_id"=>"515ed743f5a4450bb0000002", "updated_at"=>2013-04-06 06:06:07 UTC, "created_at"=>2013-04-06 06:06:07 UTC}] flags=[] (0.9999ms)
+Redirected to http://localhost:3000/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin
+Completed 302 Found in 18ms
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:06:07 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (80.0049ms)
+  Rendered posts/show.html.slim within layouts/application (127.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 225ms (Views: 220.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:08:23 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered posts/show.html.slim within layouts/application (38.0ms)
+Compiled custom.css  (5281ms)  (pid 9364)
+Compiled application.css  (9ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 5987ms (Views: 5978.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-06 14:10:53 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation.slim (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 129ms (Views: 128.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-06 14:11:14 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  Rendered posts/index.html.slim within layouts/application (19.0ms)
+  Rendered layouts/_navigation.slim (1.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 104ms (Views: 102.0ms)
+
+
+Started GET "/posts/test" for 127.0.0.1 at 2013-04-06 14:11:25 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"test"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["test"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515fad06f5a445c852000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.0000ms)
+  Rendered posts/show.html.slim within layouts/application (18.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 168.0ms)
+
+
+Started POST "/posts/test/comments" for 127.0.0.1 at 2013-04-06 14:11:45 +0800
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u5RDEC+jWL/o+kIgUNFMa9iBy5verpXaZ5rEXWx2a54=", "comment"=>{"comment_content"=>"rite another scope called graveyard which only shows tweets where the show_location column is true and the location is \"graveyard\""}, "commit"=>"Create Comment", "post_id"=>"test"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["test"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pokerback_development collection=comments documents=[{"_id"=>"515fbca1f5a4451bde00001b", "comment_content"=>"rite another scope called graveyard which only shows tweets where the show_location column is true and the location is \"graveyard\"", "user_id"=>"515fab4ef5a445c852000001", "post_id"=>"515fad06f5a445c852000005", "updated_at"=>2013-04-06 06:11:45 UTC, "created_at"=>2013-04-06 06:11:45 UTC}] flags=[] (0.9999ms)
+Redirected to http://localhost:3000/posts/test
+Completed 302 Found in 17ms
+
+
+Started GET "/posts/test" for 127.0.0.1 at 2013-04-06 14:11:45 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"test"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["test"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515fad06f5a445c852000005"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (63.0040ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (86.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 184ms (Views: 181.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-06 14:12:08 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (5.0011ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered home/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation.slim (1.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 189ms (Views: 189.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-06 14:12:16 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/index.html.slim within layouts/application (18.0ms)
+  Rendered layouts/_navigation.slim (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 167ms (Views: 166.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:12:21 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (70.0040ms)
+  Rendered posts/show.html.slim within layouts/application (106.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.0002ms)
+  Rendered layouts/_navigation.slim (7.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 209ms (Views: 205.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:36:44 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.0012ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (143.0080ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered posts/show.html.slim within layouts/application (208.0ms)
+Compiled custom.css  (4764ms)  (pid 9364)
+Compiled application.css  (12ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 5686ms (Views: 5679.3ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:37:36 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (5.0011ms)
+  Rendered posts/show.html.slim within layouts/application (53.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 138ms (Views: 134.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:38:27 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (49.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 135.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:41:09 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (71.0039ms)
+  Rendered posts/show.html.slim within layouts/application (135.0ms)
+Compiled custom.css  (3249ms)  (pid 9364)
+Compiled application.css  (9ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 3718ms (Views: 3713.2ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:42:00 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (52.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 263.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:42:40 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (52.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 153ms (Views: 149.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:43:18 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (33.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 189ms (Views: 184.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:54:46 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (66.0038ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (113.0ms)
+Compiled custom.css  (2913ms)  (pid 9364)
+Compiled application.css  (7ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 3306ms (Views: 3300.2ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:55:46 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (7.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (4.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (73.0038ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (143.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 261ms (Views: 257.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:56:16 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (9.0003ms)
+  Rendered posts/show.html.slim within layouts/application (60.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 214.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:56:37 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (70.0040ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  Rendered posts/show.html.slim within layouts/application (123.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 218ms (Views: 214.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:56:55 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (8.0001ms)
+  Rendered posts/show.html.slim within layouts/application (189.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 267ms (Views: 261.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 14:58:59 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0012ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.0009ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (10.0009ms)
+  Rendered posts/show.html.slim within layouts/application (52.0ms)
+Compiled custom.css  (3190ms)  (pid 9364)
+Compiled application.css  (7ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (3.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 3627ms (Views: 3623.2ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 15:05:58 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered posts/show.html.slim within layouts/application (35.0ms)
+Compiled custom.css  (3122ms)  (pid 9364)
+Compiled application.css  (8ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (3.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 3555ms (Views: 3549.2ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:32:10 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (601.0349ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (199.0111ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (112.0062ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (78.0051ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (310.0181ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (2667.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (80.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 6320ms (Views: 3951.2ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:32:57 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered posts/show.html.slim within layouts/application (52.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 147ms (Views: 141.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:33:37 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (65.0041ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (7.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (191.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 290ms (Views: 286.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:41:37 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (62.0ms)
+Compiled custom.css  (6854ms)  (pid 9364)
+Compiled application.css  (27ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (106.0061ms)
+  Rendered layouts/_navigation.slim (108.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 8026ms (Views: 8020.5ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:42:21 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (54.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 145.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:43:24 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  Rendered posts/show.html.slim within layouts/application (50.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 209ms (Views: 205.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:43:48 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0013ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  Rendered posts/show.html.slim within layouts/application (73.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 167ms (Views: 161.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:51:29 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0009ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (48.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 170ms (Views: 164.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:52:45 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (53.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 222ms (Views: 218.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:53:07 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (48.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 134ms (Views: 129.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:53:44 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (5.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  Rendered posts/show.html.slim within layouts/application (49.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 146ms (Views: 139.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:56:45 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (75.0041ms)
+  Rendered posts/show.html.slim within layouts/application (140.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 235ms (Views: 230.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 16:57:20 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (72.0041ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (125.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 214.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 17:03:26 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (5.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (77.0040ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (7.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered posts/show.html.slim within layouts/application (66.0ms)
+Compiled custom.css  (3487ms)  (pid 9364)
+Compiled application.css  (6ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 3908ms (Views: 3823.2ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-06 17:04:13 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (75.0051ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  Rendered posts/show.html.slim within layouts/application (114.0ms)
+Compiled custom.css  (3468ms)  (pid 9364)
+Compiled application.css  (7ms)  (pid 9364)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_navigation.slim (4.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 3922ms (Views: 3918.2ms)
