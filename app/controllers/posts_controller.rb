@@ -16,9 +16,6 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-    @userid=@post.user_id         # 获取post对应的user_id
-    @username=User.find(@userid)  # 获取user_id对应的username
-
 
     respond_to do |format|
       format.html # show.html.erb

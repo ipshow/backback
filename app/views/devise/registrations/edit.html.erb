@@ -17,6 +17,9 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
 
+  <div><%= f.label :个人介绍 %><br />
+  <%= f.text_field :bio %></div>
+
     <%=  image_tag(current_user.avatar.url) %>
     <%= f.file_field :avatar   %>
         <%= f.hidden_field :avatar_cache  %>

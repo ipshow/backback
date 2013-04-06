@@ -27,4 +27,3 @@ gem 'simple_form'
 gem 'rails_kindeditor', '~> 0.3.11'
 gem 'mongoid_slug'
 gem 'redcarpet'
-

@@ -40,6 +40,9 @@ class User
   validates_integrity_of  :avatar
   validates_processing_of :avatar
 
+  ## Prefile
+
+  field :bio, :type => String, :default => ""
 
 
   ## Confirmable
@@ -59,5 +62,5 @@ class User
   index({ email: 1 }, { unique: true, background: true })
   field :name, :type => String
   validates_presence_of :name
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at, :avatar, :avatar_cache
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at, :avatar, :avatar_cache, :bio
 end
