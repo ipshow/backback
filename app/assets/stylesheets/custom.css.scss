@@ -1,5 +1,112 @@
 @import "bootstrap";
 
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header {
+  padding: 4% 7%;
+  padding-top: 4%;
+  padding-right: 7%;
+  padding-bottom: 4%;
+  padding-left: 7%;
+  background: url(https://d3levm2kxut31z.cloudfront.net/assets/new-home/div-bar-c72a684f210680823ba324a0964508df.png) no-repeat top center;
+  background-image: url(https://d3levm2kxut31z.cloudfront.net/assets/new-home/div-bar-c72a684f210680823ba324a0964508df.png);
+  background-position-x: 50%;
+  background-position-y: 0%;
+  background-size: initial;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+/* home-template */
+
+#home-template {
+  background: #d5d5d5 url(https://d3levm2kxut31z.cloudfront.net/assets/premium-team-description/dot-bg-772c492e26f4fd9005037ffafea0e943.jpg) repeat;
+}
+
+#home-template .wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: #3f7eb0;
+}
+
+/* intro */
+
+.intro {
+  background: #3f7eb0;
+}
+.intro h1 {
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+  font-family: "MuseoSans-300";
+  padding: 2% 7%;
+}
+
+.intro .sign-up-list {
+  text-align: center;
+  margin-bottom: 7%;
+}
+
+.intro .sign-up-list a span {
+  display: inline-block;
+  height: 23px;
+  width: 21px;
+  background: url(https://d3levm2kxut31z.cloudfront.net/assets/new-home/sign-up-sprite-home-75cf1371093a1ab5f329e3257a38ec40.png) no-repeat 0px 0px;
+  margin-right: 5px;
+  margin-left: -20px;
+  margin-bottom: -4px;
+}
+
+.intro .sign-up-list li:first-child {
+  margin-left: 0;
+}
+
+.intro .sign-up-list a {
+  display: block;
+  background: #fbfbfb;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  color: #2c6593;
+  font-size: 1.6em;
+  height: 60px;
+  line-height: 60px;
+  width: 171px;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(53,103,163,0.7);
+  box-shadow: 0px 3px 0px 0px rgba(53,103,163,0.7);
+
+}
+
+.intro .sign-up-list a span {
+  display: inline-block;
+  height: 23px;
+  width: 21px;
+  background: url(https://d3levm2kxut31z.cloudfront.net/assets/new-home/sign-up-sprite-home-75cf1371093a1ab5f329e3257a38ec40.png) no-repeat 0px 0px;
+  margin-right: 5px;
+  margin-left: -20px;
+  margin-bottom: -4px;
+}
 /* universal */
 
 html {
@@ -102,3 +209,36 @@ post-single {
   min-height: 153px;
   word-wrap: break-word;
 }
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+

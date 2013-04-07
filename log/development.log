@@ -20571,3 +20571,1954 @@ Compiled application.css  (7ms)  (pid 9364)
   Rendered layouts/_navigation.slim (4.0ms)
   Rendered layouts/_messages.html.erb (1.0ms)
 Completed 200 OK in 3922ms (Views: 3918.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 18:24:49 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (18.5549ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (8.7523ms)
+  Rendered home/index.html.erb within layouts/application (40.6ms)
+Compiled bootstrap_and_overrides.css  (3627ms)  (pid 4680)
+Compiled custom.css  (920ms)  (pid 4680)
+Compiled application.css  (7ms)  (pid 4680)
+Compiled jquery.js  (1ms)  (pid 4680)
+Compiled jquery_ujs.js  (0ms)  (pid 4680)
+Compiled kindeditor/kindeditor.js  (1ms)  (pid 4680)
+Compiled kindeditor.js  (20ms)  (pid 4680)
+Compiled bootstrap-transition.js  (0ms)  (pid 4680)
+Compiled bootstrap-affix.js  (0ms)  (pid 4680)
+Compiled bootstrap-alert.js  (0ms)  (pid 4680)
+Compiled bootstrap-button.js  (0ms)  (pid 4680)
+Compiled bootstrap-carousel.js  (0ms)  (pid 4680)
+Compiled bootstrap-collapse.js  (0ms)  (pid 4680)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 4680)
+Compiled bootstrap-modal.js  (0ms)  (pid 4680)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 4680)
+Compiled bootstrap-tab.js  (0ms)  (pid 4680)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 4680)
+Compiled bootstrap-popover.js  (0ms)  (pid 4680)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 4680)
+Compiled bootstrap.js  (328ms)  (pid 4680)
+Compiled application.js  (632ms)  (pid 4680)
+  Rendered layouts/_navigation.slim (18.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 6031ms (Views: 6030.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 18:24:58 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3500ms)
+  Rendered posts/index.html.slim within layouts/application (4.3ms)
+  Rendered layouts/_navigation.slim (0.7ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 513ms (Views: 513.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-04-07 18:25:03 +0800
+Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 57ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-04-07 18:25:03 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered /Users/lishuang/.rvm/gems/ruby-1.9.3-head/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_navigation.slim (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 528ms (Views: 527.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-04-07 18:25:15 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.slim (0.7ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 577ms (Views: 576.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-07 18:26:00 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKQF9AtO26FMS8hZ/gmYCRdlrQlsXr4ARuXfbInF04E=", "user"=>{"name"=>"ipshow", "email"=>"ipshow@msn.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fe19351f8e8 @original_filename="thumb_1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"images-User-103626-upload%2Fasset%2F2024%2Fthumb_1.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/8v/k1q4f0gn1t15nlx944scwxdm0000gn/T/RackMultipart20130407-4680-jlm6w0>>, "avatar_cache"=>""}, "commit"=>"Sign up"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"email"=>"ipshow@msn.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (11.6420ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pokerback_development collection=users documents=[{"_id"=>"516149b85a4ec57c4b000001", "email"=>"ipshow@msn.com", "encrypted_password"=>"$2a$10$EQ7KHswqCS0BcnKuJIOMV.FTCvmJv4iZ7GozafYqd/5zKekADN5oa", "sign_in_count"=>0, "bio"=>"", "name"=>"ipshow", "avatar"=>"thumb_1.jpg", "updated_at"=>2013-04-07 10:26:00 UTC, "created_at"=>2013-04-07 10:26:00 UTC}] flags=[] (0.1631ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} update={"$set"=>{"last_sign_in_at"=>2013-04-07 10:26:00 UTC, "current_sign_in_at"=>2013-04-07 10:26:00 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1, "updated_at"=>2013-04-07 10:26:00 UTC}} flags=[] (0.1049ms)
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 245ms
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-04-07 18:26:00 +0800
+Processing by PostsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1240.6001ms)
+  Rendered posts/_form.html.slim (7.7ms)
+  Rendered posts/new.html.slim within layouts/application (11.0ms)
+  Rendered layouts/_navigation.slim (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 2760ms (Views: 1518.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-04-07 18:30:59 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKQF9AtO26FMS8hZ/gmYCRdlrQlsXr4ARuXfbInF04E=", "post"=>{"title"=>"说说我的减肥心得", "content"=>"三年前，我刚从上海到北京工作，半年减肥将近30斤，从201年3月份的84公斤，减到了2010年9月份的70公斤，6个月减了14公斤（我的身高是174cm），身体状态也感觉很好。之后三年松懈了，慢慢体重又上升到了79公斤，最近下定决心，重新开始减肥旅程，看看半年之后我能不能减肥到70公斤以下。下面是我三年前减肥的总结经验，重新开始执行起来！\r\n\r\n## 养成不吃晚餐的良好习惯 \r\n\r\n我从3月份开始不吃晚饭。貌似听起来很吓人，其实不然。很多白领都不吃早餐，吃中晚两餐。而我则是吃早中两餐，早餐还吃得很饱，所以每天进食量并不比一般人少。 \r\n\r\n晚上饿了怎么办？ 一开始有点饿，但是习惯就好了，不觉得饿了，但我晚上也都吃一点水果，并非什么都不吃，其实就是要严格管住自己的嘴，控制好每天的进食量。现在每天晚上肚子空着睡觉感觉很舒服，如果哪天有应酬吃了晚饭回来，则会觉得很不舒服，肚子很撑，所以说都是习惯问题。不吃晚饭对我来说已经养成习惯了，如果我减到 63公斤，体重不会持续下降的话，我觉得我也没有什么必要非要吃晚餐了。 \r\n\r\n不过我感觉我应该接近到达了平衡点了，一开始我不吃晚餐，体重降得很快，一个月降了起码4公斤，越降越慢，现在在严格控制得情况下，一个月也不过降1公斤而已，所以说，估计我的体重应该会最终维持在65-67公斤左右，不会因为不吃晚饭而进一步下降了。所以我觉得这个状况很健康。 \r\n\r\n## 不喝碳酸饮料 \r\n\r\n我本来就不太喜欢喝含糖份高的碳酸饮料，喝了觉得胃不消化，可能我胃酸偏多吧，反倒是喝茶很舒服，可能茶碱中和了胃酸。所以我每天喝茶很多，坚决不喝那些各种饮料包括可乐。 \r\n\r\n## 良好的作息习惯 \r\n\r\n早睡早起，保证充足睡眠很重要，我减肥是为了身体健康，之前我的脂肪肝中度，肝功能不正常(转氨酶高)。早睡早起有利于肝脏的正常工作，减肥下来以后，脂肪肝转为轻度(据说脂肪脱离需要时间，所以不能马上恢复正常)，肝功能回复正常。总体感觉自己的精力和体力都比过去好很多。 \r\n\r\n## 适度锻炼 \r\n\r\n因为工作很忙，锻炼其实是个比较奢侈的事情，不过只有有空，我会尽量游泳和打球，最近锻炼的也很多，多锻炼对身体有好处。但我不认为应该通过剧烈运动来减肥。剧烈运动一则无法持久，二来很容易挫伤积极性，物极必反。减肥的目的是为了身体健康，不是为了减肥而减肥。 \r\n\r\n## 严格监视体重变化 \r\n\r\n我每天早晚上秤测量体重，记录在我的iPad里面(随便用什么)，精确掌握自己体重变化可以严格监督自己。比方说哪天应酬大吃了一顿，回来上秤一看，完了，飙升了1公斤，半个月到1个月的减肥努力化为泡影！ 很直观的反馈，如此几次教训下来，再也不敢晚上开戒了。而当你看到体重每天0.1的匀速下降，也颇有成就感，这样才能督促你每天控制好饮食，适度锻炼，保持良好作息，因为你每天都得到了成就。 \r\n\r\n我的减肥心得就是这么几条，其实还是要坚持，有耐心，体重很快就减下来了。"}, "commit"=>"Create Post"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5038ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3631ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$all"=>[/^shuo\-shuo\-wo\-de\-jian\-fei\-xin\-de(?:-(\d+))?$/]}, "_id"=>{"$ne"=>"51614ae35a4ec57c4b000002"}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (45.5058ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pokerback_development collection=posts documents=[{"_id"=>"51614ae35a4ec57c4b000002", "_slugs"=>["shuo-shuo-wo-de-jian-fei-xin-de"], "title"=>"说说我的减肥心得", "content"=>"三年前，我刚从上海到北京工作，半年减肥将近30斤，从201年3月份的84公斤，减到了2010年9月份的70公斤，6个月减了14公斤（我的身高是174cm），身体状态也感觉很好。之后三年松懈了，慢慢体重又上升到了79公斤，最近下定决心，重新开始减肥旅程，看看半年之后我能不能减肥到70公斤以下。下面是我三年前减肥的总结经验，重新开始执行起来！\r\n\r\n## 养成不吃晚餐的良好习惯 \r\n\r\n我从3月份开始不吃晚饭。貌似听起来很吓人，其实不然。很多白领都不吃早餐，吃中晚两餐。而我则是吃早中两餐，早餐还吃得很饱，所以每天进食量并不比一般人少。 \r\n\r\n晚上饿了怎么办？ 一开始有点饿，但是习惯就好了，不觉得饿了，但我晚上也都吃一点水果，并非什么都不吃，其实就是要严格管住自己的嘴，控制好每天的进食量。现在每天晚上肚子空着睡觉感觉很舒服，如果哪天有应酬吃了晚饭回来，则会觉得很不舒服，肚子很撑，所以说都是习惯问题。不吃晚饭对我来说已经养成习惯了，如果我减到 63公斤，体重不会持续下降的话，我觉得我也没有什么必要非要吃晚餐了。 \r\n\r\n不过我感觉我应该接近到达了平衡点了，一开始我不吃晚餐，体重降得很快，一个月降了起码4公斤，越降越慢，现在在严格控制得情况下，一个月也不过降1公斤而已，所以说，估计我的体重应该会最终维持在65-67公斤左右，不会因为不吃晚饭而进一步下降了。所以我觉得这个状况很健康。 \r\n\r\n## 不喝碳酸饮料 \r\n\r\n我本来就不太喜欢喝含糖份高的碳酸饮料，喝了觉得胃不消化，可能我胃酸偏多吧，反倒是喝茶很舒服，可能茶碱中和了胃酸。所以我每天喝茶很多，坚决不喝那些各种饮料包括可乐。 \r\n\r\n## 良好的作息习惯 \r\n\r\n早睡早起，保证充足睡眠很重要，我减肥是为了身体健康，之前我的脂肪肝中度，肝功能不正常(转氨酶高)。早睡早起有利于肝脏的正常工作，减肥下来以后，脂肪肝转为轻度(据说脂肪脱离需要时间，所以不能马上恢复正常)，肝功能回复正常。总体感觉自己的精力和体力都比过去好很多。 \r\n\r\n## 适度锻炼 \r\n\r\n因为工作很忙，锻炼其实是个比较奢侈的事情，不过只有有空，我会尽量游泳和打球，最近锻炼的也很多，多锻炼对身体有好处。但我不认为应该通过剧烈运动来减肥。剧烈运动一则无法持久，二来很容易挫伤积极性，物极必反。减肥的目的是为了身体健康，不是为了减肥而减肥。 \r\n\r\n## 严格监视体重变化 \r\n\r\n我每天早晚上秤测量体重，记录在我的iPad里面(随便用什么)，精确掌握自己体重变化可以严格监督自己。比方说哪天应酬大吃了一顿，回来上秤一看，完了，飙升了1公斤，半个月到1个月的减肥努力化为泡影！ 很直观的反馈，如此几次教训下来，再也不敢晚上开戒了。而当你看到体重每天0.1的匀速下降，也颇有成就感，这样才能督促你每天控制好饮食，适度锻炼，保持良好作息，因为你每天都得到了成就。 \r\n\r\n我的减肥心得就是这么几条，其实还是要坚持，有耐心，体重很快就减下来了。", "user_id"=>"516149b85a4ec57c4b000001", "updated_at"=>2013-04-07 10:31:00 UTC, "created_at"=>2013-04-07 10:31:00 UTC}] flags=[] (0.1261ms)
+Redirected to http://localhost:3000/posts/shuo-shuo-wo-de-jian-fei-xin-de
+Completed 302 Found in 88ms
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 18:31:00 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (61.8641ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4950ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (20.3900ms)
+  Rendered posts/show.html.slim within layouts/application (71.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4423ms)
+  Rendered layouts/_navigation.slim (1.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 762ms (Views: 698.9ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 18:31:21 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.8388ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4752ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5550ms)
+  Rendered posts/show.html.slim within layouts/application (6.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5476ms)
+  Rendered layouts/_navigation.slim (1.9ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 516ms (Views: 514.2ms)
+
+
+Started POST "/posts/shuo-shuo-wo-de-jian-fei-xin-de/comments" for 127.0.0.1 at 2013-04-07 18:45:53 +0800
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKQF9AtO26FMS8hZ/gmYCRdlrQlsXr4ARuXfbInF04E=", "comment"=>{"comment_content"=>"Send an email to the address below and every member on the list will receive it. All members can send messages to the list. Replies go to everyone on the list."}, "commit"=>"Create Comment", "post_id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4060ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.4261ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3209ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=pokerback_development collection=comments documents=[{"_id"=>"51614e615a4ec57c4b000005", "comment_content"=>"Send an email to the address below and every member on the list will receive it. All members can send messages to the list. Replies go to everyone on the list.", "user_id"=>"516149b85a4ec57c4b000001", "post_id"=>"51614ae35a4ec57c4b000002", "updated_at"=>2013-04-07 10:45:53 UTC, "created_at"=>2013-04-07 10:45:53 UTC}] flags=[] (0.1101ms)
+Redirected to http://localhost:3000/posts/shuo-shuo-wo-de-jian-fei-xin-de
+Completed 302 Found in 6ms
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 18:45:53 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (26.6001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4370ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4501ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4480ms)
+  Rendered posts/show.html.slim within layouts/application (19.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4590ms)
+  Rendered layouts/_navigation.slim (1.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 656ms (Views: 628.1ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2013-04-07 18:46:06 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4201ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 524ms (Views: 522.3ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2013-04-07 18:47:21 +0800
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKQF9AtO26FMS8hZ/gmYCRdlrQlsXr4ARuXfbInF04E=", "user"=>{"name"=>"ipshow", "email"=>"ipshow@msn.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "bio"=>"莫言(1955年2月17日-)，原名管谟业，生于山东高密县，中国当代著名作家。山东大学文学与新闻传播学院兼职教授，香港公开大学荣誉文学博士，青岛科技大学客座教授。其作品深受魔幻现实主义影响，代表作有《红高粱》、《檀香刑》、《丰乳肥臀》等，其中《蛙》获第八届茅盾文学奖。", "avatar_cache"=>""}, "commit"=>"Update"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4592ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2868ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} update={"$set"=>{"bio"=>"莫言(1955年2月17日-)，原名管谟业，生于山东高密县，中国当代著名作家。山东大学文学与新闻传播学院兼职教授，香港公开大学荣誉文学博士，青岛科技大学客座教授。其作品深受魔幻现实主义影响，代表作有《红高粱》、《檀香刑》、《丰乳肥臀》等，其中《蛙》获第八届茅盾文学奖。", "updated_at"=>2013-04-07 10:47:22 UTC}} flags=[] (0.1121ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 18:47:22 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3500ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4261ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 529ms (Views: 528.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 18:47:25 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4580ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4101ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3080ms)
+  Rendered posts/index.html.slim within layouts/application (3.9ms)
+  Rendered layouts/_navigation.slim (0.5ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 556ms (Views: 555.2ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 18:47:27 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.5281ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3340ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3490ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3326ms)
+  Rendered posts/show.html.slim within layouts/application (6.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5388ms)
+  Rendered layouts/_navigation.slim (1.8ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 531ms (Views: 529.2ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:20:31 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4859ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.4439ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3958ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3731ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3581ms)
+  Rendered posts/show.html.slim within layouts/application (8.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4549ms)
+  Rendered layouts/_navigation.slim (1.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 675ms (Views: 672.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:20:41 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4778ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3989ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.slim (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 534ms (Views: 533.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:21:07 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5052ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4652ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Compiled custom.css  (2578ms)  (pid 4680)
+Compiled application.css  (18ms)  (pid 4680)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3785ms (Views: 3785.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:21:40 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5062ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3781ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 564ms (Views: 563.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:21:56 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4992ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4280ms)
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.slim (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 548ms (Views: 548.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:22:05 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5081ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2842ms)
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 539ms (Views: 538.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:25:53 +0800
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3541ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2501ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3207ms)
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Compiled custom.css  (2308ms)  (pid 4680)
+Compiled application.css  (18ms)  (pid 4680)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3017ms (Views: 3016.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 19:25:59 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (16.3608ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3901ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3359ms)
+  Rendered posts/index.html.slim within layouts/application (20.0ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 547ms (Views: 546.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-04-07 19:26:02 +0800
+Processing by PostsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4470ms)
+  Rendered posts/_form.html.slim (15.4ms)
+  Rendered posts/new.html.slim within layouts/application (16.6ms)
+  Rendered layouts/_navigation.slim (0.5ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 546ms (Views: 533.7ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:26:07 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.6230ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4990ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3810ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2851ms)
+  Rendered posts/show.html.slim within layouts/application (7.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4139ms)
+  Rendered layouts/_navigation.slim (1.5ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 704ms (Views: 702.7ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:37:31 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3548ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.3181ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4032ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4139ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2880ms)
+  Rendered posts/show.html.slim within layouts/application (7.8ms)
+Compiled custom.css  (2417ms)  (pid 4680)
+Compiled application.css  (18ms)  (pid 4680)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4530ms)
+  Rendered layouts/_navigation.slim (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3231ms (Views: 3229.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2013-04-07 19:37:42 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4489ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (33.5ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 554ms (Views: 535.9ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:44:40 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3409ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (9.3429ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4621ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3569ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3078ms)
+  Rendered posts/show.html.slim within layouts/application (7.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4599ms)
+  Rendered layouts/_navigation.slim (28.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 649ms (Views: 638.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:44:47 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4282ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3710ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 564ms (Views: 563.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:45:40 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4642ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3300ms)
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Compiled custom.css  (2179ms)  (pid 4680)
+Compiled application.css  (18ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_navigation.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2936ms (Views: 2936.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:48:34 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5021ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3099ms)
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (3.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 496ms (Views: 495.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 19:48:37 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4900ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3850ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3080ms)
+  Rendered posts/index.html.slim within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 560ms (Views: 560.0ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:48:40 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.5171ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4380ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4144ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3932ms)
+  Rendered posts/show.html.slim within layouts/application (7.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4728ms)
+  Rendered layouts/_header.html.slim (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 551ms (Views: 550.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 19:49:07 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3510ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2971ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4218ms)
+  Rendered posts/index.html.slim within layouts/application (4.0ms)
+Compiled application.css  (4ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 584ms (Views: 583.4ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:49:15 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.5379ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4969ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4590ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2980ms)
+  Rendered posts/show.html.slim within layouts/application (7.5ms)
+Compiled application.css  (54ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4451ms)
+  Rendered layouts/_header.html.slim (1.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 622ms (Views: 620.6ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:49:29 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.5803ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4091ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4051ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4790ms)
+  Rendered posts/show.html.slim within layouts/application (8.1ms)
+Compiled scaffolds.css  (1ms)  (pid 4680)
+Compiled application.css  (3ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4578ms)
+  Rendered layouts/_header.html.slim (1.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 650ms (Views: 647.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 19:49:34 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4108ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3231ms)
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 554ms (Views: 553.6ms)
+
+
+Started GET "/users/516149b85a4ec57c4b000001" for 127.0.0.1 at 2013-04-07 19:49:43 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"516149b85a4ec57c4b000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4060ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3109ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2952ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4501ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2859ms)
+  Rendered users/show.slim within layouts/application (5.6ms)
+Compiled scaffolds.css  (10ms)  (pid 4680)
+Compiled application.css  (3ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 627ms (Views: 624.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 19:49:47 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4141ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4959ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3102ms)
+  Rendered posts/index.html.slim within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 528ms (Views: 527.5ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 19:49:49 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.1389ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3791ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (4.7960ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3679ms)
+  Rendered posts/show.html.slim within layouts/application (14.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4618ms)
+  Rendered layouts/_header.html.slim (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 548ms (Views: 546.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:29:33 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3862ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3390ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4280ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3119ms)
+  Rendered posts/index.html.slim within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 735ms (Views: 734.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:32:37 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4170ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3331ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2880ms)
+  Rendered posts/index.html.slim within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 568ms (Views: 567.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:33:09 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5071ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4239ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6049ms)
+  Rendered posts/index.html.slim within layouts/application (5.0ms)
+Compiled application.css  (38ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 728ms (Views: 727.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:33:12 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5231ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3951ms)
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 519ms (Views: 518.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:33:27 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4497ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2730ms)
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Compiled bootstrap_and_overrides.css  (18ms)  (pid 4680)
+Compiled application.css  (2ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 610ms (Views: 609.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:34:28 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5031ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4480ms)
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 506ms (Views: 505.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:34:39 +0800
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4060ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2890ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3691ms)
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Compiled custom.css  (10ms)  (pid 4680)
+Compiled application.css  (2ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 464ms (Views: 464.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:34:48 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4239ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3870ms)
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Compiled custom.css  (2319ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2746ms (Views: 2745.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-04-07 20:37:28 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QKQF9AtO26FMS8hZ/gmYCRdlrQlsXr4ARuXfbInF04E="}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (9.7759ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:37:28 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4010ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 529ms (Views: 529.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-04-07 20:37:56 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 469ms (Views: 468.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-04-07 20:38:04 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/lishuang/.rvm/gems/ruby-1.9.3-head/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (25.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 469ms (Views: 468.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-04-07 20:38:11 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oS6GXlCUGnq6i14lPYtCxTcaxQIQ0uaGu7/tVYZ5iS4=", "user"=>{"email"=>"ipshow@msn.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"email"=>"ipshow@msn.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (150.0590ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} update={"$set"=>{"current_sign_in_at"=>2013-04-07 12:38:11 UTC, "sign_in_count"=>2, "updated_at"=>2013-04-07 12:38:11 UTC}} flags=[] (0.1261ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 674ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:38:11 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3960ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3228ms)
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (35.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 421ms (Views: 421.2ms)
+
+
+Started GET "/users/516149b85a4ec57c4b000001" for 127.0.0.1 at 2013-04-07 20:38:13 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"516149b85a4ec57c4b000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4761ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3700ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4601ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3228ms)
+  Rendered users/show.slim within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 387ms (Views: 384.8ms)
+
+
+Started GET "/posts/516149b85a4ec57c4b000001" for 127.0.0.1 at 2013-04-07 20:38:18 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"516149b85a4ec57c4b000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3812ms)
+Completed 404 Not Found in 16ms
+
+Mongoid::Errors::DocumentNotFound - 
+Problem:
+  Document(s) not found for class Post with id(s) 516149b85a4ec57c4b000001.
+Summary:
+  When calling Post.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 516149b85a4ec57c4b000001 ... (1 total) and the following ids were not found: 516149b85a4ec57c4b000001.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.:
+  (gem) mongoid-3.1.2/lib/mongoid/errors/document_not_found.rb:39:in `initialize'
+  (gem) mongoid-3.1.2/lib/mongoid/criteria.rb:464:in `check_for_missing_documents!'
+  (gem) mongoid-3.1.2/lib/mongoid/criterion/findable.rb:20:in `execute_or_raise'
+  (gem) mongoid-3.1.2/lib/mongoid/criterion/findable.rb:40:in `find'
+  (gem) mongoid_slug-3.0.0/lib/mongoid/slug/criteria.rb:33:in `find'
+  (gem) mongoid-3.1.2/lib/mongoid/finders.rb:85:in `find'
+  app/controllers/posts_controller.rb:18:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__2937723120768725770__process_action__119616819220512194__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1508689591158745289__call__2463721500912712610__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70303408180720/variables" for 127.0.0.1 at 2013-04-07 20:38:18 +0800
+
+
+Started GET "/users/516149b85a4ec57c4b000001" for 127.0.0.1 at 2013-04-07 20:39:04 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"516149b85a4ec57c4b000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4809ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2723ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5500ms)
+  Rendered users/show.slim within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 32ms
+
+NoMethodError - undefined method `post_path' for #<User:0x007fe193481418>:
+  (gem) mongoid-3.1.2/lib/mongoid/attributes.rb:318:in `method_missing'
+  app/views/users/show.slim:17:in `block in _app_views_users_show_slim__4271351334166875777_70303407698220'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:636:in `yield_document'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:119:in `block (2 levels) in each'
+  (gem) moped-1.4.4/lib/moped/query.rb:77:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:118:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:615:in `selecting'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:117:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual.rb:19:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:166:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `each'
+  app/views/users/show.slim:13:in `_app_views_users_show_slim__4271351334166875777_70303407698220'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/lishuang/.rvm/rubies/ruby-1.9.3-head/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__1436752331256847371__process_action__119616819220512194__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1508689591158745289__call__2463721500912712610__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70303407211560/variables" for 127.0.0.1 at 2013-04-07 20:39:04 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5939ms)
+
+
+Started GET "/users/516149b85a4ec57c4b000001" for 127.0.0.1 at 2013-04-07 20:39:17 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"516149b85a4ec57c4b000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3898ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3920ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5419ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3819ms)
+  Rendered users/show.slim within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 19ms
+
+NameError - undefined local variable or method `user' for #<#<Class:0x007fe19663d1c8>:0x007fe194ab8358>:
+  app/views/users/show.slim:17:in `block in _app_views_users_show_slim__4271351334166875777_70303407780940'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:636:in `yield_document'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:119:in `block (2 levels) in each'
+  (gem) moped-1.4.4/lib/moped/query.rb:77:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:118:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:615:in `selecting'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:117:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual.rb:19:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:166:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `each'
+  app/views/users/show.slim:13:in `_app_views_users_show_slim__4271351334166875777_70303407780940'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/lishuang/.rvm/rubies/ruby-1.9.3-head/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__1436752331256847371__process_action__119616819220512194__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1508689591158745289__call__2463721500912712610__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70303412483080/variables" for 127.0.0.1 at 2013-04-07 20:39:18 +0800
+
+
+Started GET "/users/516149b85a4ec57c4b000001" for 127.0.0.1 at 2013-04-07 20:39:25 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"516149b85a4ec57c4b000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4690ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2658ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3619ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"516149b85a4ec57c4b000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3152ms)
+  Rendered users/show.slim within layouts/application (5.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 435ms (Views: 432.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:39:29 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4358ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5541ms)
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 439ms (Views: 438.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:43:07 +0800
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3271ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (14.4451ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3781ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (1.7ms)
+Completed 500 Internal Server Error in 440ms
+
+Slim::Parser::SyntaxError - Malformed indentation
+  /Users/lishuang/rails/pokerback/app/views/layouts/_header.html.slim, Line 5, Column 6
+    nav
+    ^
+:
+  (gem) slim-1.3.6/lib/slim/parser.rb:505:in `syntax_error!'
+  (gem) slim-1.3.6/lib/slim/parser.rb:206:in `parse_line'
+  (gem) slim-1.3.6/lib/slim/parser.rb:64:in `call'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `block in call'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `each'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `inject'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `call'
+  (gem) temple-0.5.5/lib/temple/mixins/template.rb:10:in `compile'
+  (gem) temple-0.5.5/lib/temple/templates/rails.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:268:in `compile'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_mods.rb:12:in `render_with_haml'
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__655517263080563282_70303407151780'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/lishuang/.rvm/rubies/ruby-1.9.3-head/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__2606600819400754655__process_action__3669366812635300456__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/mapper.rb:42:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1508689591158745289__call__2463721500912712610__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/70303408102420/variables" for 127.0.0.1 at 2013-04-07 20:43:07 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:43:21 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4759ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3917ms)
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (1.9ms)
+Completed 500 Internal Server Error in 432ms
+
+Slim::Parser::SyntaxError - Malformed indentation
+  /Users/lishuang/rails/pokerback/app/views/layouts/_header.html.slim, Line 5, Column 6
+    nav
+    ^
+:
+  (gem) slim-1.3.6/lib/slim/parser.rb:505:in `syntax_error!'
+  (gem) slim-1.3.6/lib/slim/parser.rb:206:in `parse_line'
+  (gem) slim-1.3.6/lib/slim/parser.rb:64:in `call'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `block in call'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `each'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `inject'
+  (gem) temple-0.5.5/lib/temple/engine.rb:50:in `call'
+  (gem) temple-0.5.5/lib/temple/mixins/template.rb:10:in `compile'
+  (gem) temple-0.5.5/lib/temple/templates/rails.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:268:in `compile'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_mods.rb:12:in `render_with_haml'
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__655517263080563282_70303407151780'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/lishuang/.rvm/rubies/ruby-1.9.3-head/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__2606600819400754655__process_action__3669366812635300456__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/mapper.rb:42:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1508689591158745289__call__2463721500912712610__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/70303410749500/variables" for 127.0.0.1 at 2013-04-07 20:43:21 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:43:28 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4590ms)
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5271ms)
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (39.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 442ms (Views: 442.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-04-07 20:43:30 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oS6GXlCUGnq6i14lPYtCxTcaxQIQ0uaGu7/tVYZ5iS4="}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4070ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:43:30 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4070ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 382ms (Views: 382.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:43:33 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4940ms)
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 383ms (Views: 382.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:43:40 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4370ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 396ms (Views: 396.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:43:45 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4420ms)
+  Rendered posts/index.html.slim within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 457ms (Views: 456.5ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 20:43:47 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.5612ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4718ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4177ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5701ms)
+  Rendered posts/show.html.slim within layouts/application (41.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 479ms (Views: 477.6ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 20:44:00 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.4561ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3538ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3483ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3383ms)
+  Rendered posts/show.html.slim within layouts/application (7.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 442ms (Views: 441.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:45:56 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4652ms)
+  Rendered posts/index.html.slim within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (3.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 485ms (Views: 484.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:46:01 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4332ms)
+  Rendered posts/index.html.slim within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 423ms (Views: 422.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:46:30 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5779ms)
+  Rendered posts/index.html.slim within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 452ms (Views: 451.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:49:34 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3920ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2820ms)
+  Rendered posts/index.html.slim within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 440ms (Views: 439.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:49:37 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4470ms)
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 447ms (Views: 446.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:53:19 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4590ms)
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 503ms (Views: 502.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:54:33 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4399ms)
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Compiled custom.css  (2191ms)  (pid 4680)
+Compiled application.css  (5ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2723ms (Views: 2723.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:56:29 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4439ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3631ms)
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Compiled custom.css  (2219ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (3.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2677ms (Views: 2677.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:56:43 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4749ms)
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Compiled custom.css  (2097ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2545ms (Views: 2545.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:57:09 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4344ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (3.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 429ms (Views: 428.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 20:57:38 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4380ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (4.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 401ms (Views: 400.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 20:58:24 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4389ms)
+  Rendered posts/index.html.slim within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 413ms (Views: 412.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:00:31 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4318ms)
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Compiled custom.css  (2003ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2429ms (Views: 2429.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:01:29 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3529ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2377ms)
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Compiled custom.css  (2084ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2501ms (Views: 2501.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:02:41 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4311ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Compiled custom.css  (2006ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2432ms (Views: 2432.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:04:07 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3831ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Compiled custom.css  (2033ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2463ms (Views: 2462.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 21:04:17 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3729ms)
+  Rendered posts/index.html.slim within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 435ms (Views: 434.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 21:05:24 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4311ms)
+  Rendered posts/index.html.slim within layouts/application (1.5ms)
+Compiled custom.css  (2081ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2563ms (Views: 2562.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:05:27 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4480ms)
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 424ms (Views: 423.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:06:11 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3850ms)
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Compiled custom.css  (2118ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2565ms (Views: 2565.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:06:25 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3860ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Compiled custom.css  (2112ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2642ms (Views: 2642.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 21:06:43 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4299ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3192ms)
+  Rendered posts/index.html.slim within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 421ms (Views: 420.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-04-07 21:06:44 +0800
+Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-04-07 21:06:44 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/lishuang/.rvm/gems/ruby-1.9.3-head/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 496ms (Views: 495.4ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 21:06:50 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.4647ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4029ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3312ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2720ms)
+  Rendered posts/show.html.slim within layouts/application (6.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 418ms (Views: 416.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:11:49 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3982ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2942ms)
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 431ms (Views: 430.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:13:42 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3934ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Compiled custom.css  (2011ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2446ms (Views: 2446.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:13:56 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4389ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 428ms (Views: 428.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:16:46 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4308ms)
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Compiled custom.css  (2096ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2522ms (Views: 2521.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:18:16 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3729ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3252ms)
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 388ms (Views: 387.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:18:38 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4511ms)
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 393ms (Views: 392.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:19:01 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3791ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Compiled custom.css  (2015ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2442ms (Views: 2442.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:19:25 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3991ms)
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Compiled custom.css  (2001ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2429ms (Views: 2429.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 21:24:53 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3400ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2367ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Compiled custom.css  (2017ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2443ms (Views: 2442.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-07 21:25:14 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3798ms)
+  Rendered posts/index.html.slim within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 422ms (Views: 421.4ms)
+
+
+Started GET "/posts/shuo-shuo-wo-de-jian-fei-xin-de" for 127.0.0.1 at 2013-04-07 21:25:22 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"shuo-shuo-wo-de-jian-fei-xin-de"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["shuo-shuo-wo-de-jian-fei-xin-de"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (0.4530ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.2861ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"51614ae35a4ec57c4b000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2940ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3321ms)
+  Rendered posts/show.html.slim within layouts/application (6.0ms)
+Compiled custom.css  (2053ms)  (pid 4680)
+Compiled application.css  (1ms)  (pid 4680)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2506ms (Views: 2504.7ms)

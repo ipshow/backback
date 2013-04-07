@@ -3,4 +3,33 @@
   <p>User: <%=link_to user.name, user %></p>
 <% end %>
 
-<%= link_to "My Blog", posts_path %>
+<div id="home-template" class="wrapper">
+<section class='intro'>
+  <h1>
+    Where developers come to meet.
+  </h1>
+  <h2>
+    Join us
+  </h2>
+  <ul class='sign-up-list'>
+    <li>
+      <a href='/auth/github' rel='nofollow'>
+        <span class='git'></span>
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href='/auth/twitter' rel='nofollow'>
+        <span class='twitter'></span>
+        Twitter
+      </a>
+    </li>
+    <li>
+      <a href='/auth/linkedin' rel='nofollow'>
+        <span class='linkedin'></span>
+        LinkedIn
+      </a>
+    </li>
+  </ul>
+</section>
+    </div>
