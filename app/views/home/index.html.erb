@@ -1,6 +1,10 @@
+<%  if user_signed_in? %>
+   sdafsdafdsa
+
+<% else %>
 <h3>Home</h3>
 <% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+
 <% end %>
 
 <div id="home-template" class="wrapper">
@@ -33,3 +37,5 @@
   </ul>
 </section>
     </div>
+
+<% end %>
