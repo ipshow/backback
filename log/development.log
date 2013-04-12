@@ -26074,3 +26074,77 @@ Processing by HomeController#index as HTML
   Rendered layouts/_header.html.slim (0.7ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 460ms (Views: 460.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-08 00:11:50 +0800
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4151ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"516149b85a4ec57c4b000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3459ms)
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 420ms (Views: 420.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-08 10:52:19 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7973ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (13.8109ms)
+  Rendered home/index.html.erb within layouts/application (41.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.slim (30.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1586ms (Views: 1585.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-08 13:22:57 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4141ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3660ms)
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 600ms (Views: 600.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-08 14:44:59 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4098ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4072ms)
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.slim (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 493ms (Views: 493.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-08 14:45:01 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4880ms)
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 407ms (Views: 406.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-08 14:45:03 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4718ms)
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 430ms (Views: 429.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-08 14:45:05 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5000ms)
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 396ms (Views: 395.7ms)

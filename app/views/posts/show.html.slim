@@ -15,6 +15,9 @@ p#notice = notice
 
     h3
       = @post.title
+      div align="right"
+        | 发布于
+        = comment.created_at.strftime("%B %d %H: %M")
 
 
     p
@@ -36,6 +39,8 @@ p#notice = notice
         .span2
           = comment.user.name
           img class="avatar" src="#{comment.user.avatar}" class="img-circle"
+          | 发布于
+          = comment.created_at.strftime("%B %d %H: %M")
 
   .add-comment
     p
