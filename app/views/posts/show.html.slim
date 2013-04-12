@@ -17,7 +17,7 @@ p#notice = notice
       = @post.title
       div align="right"
         | 发布于
-        = comment.created_at.strftime("%B %d %H: %M")
+        = @post.created_at.strftime("%B %d %H: %M")
 
 
     p
