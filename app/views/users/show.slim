@@ -14,10 +14,10 @@ p
     p
       strong 主题:
     p
-      a href="#{post_path}" #{post.title}
+      = link_to post.title, post
   - @user.comments.each do |comment|
     p
       strong 回复:
     p
-      a href="#" #{comment.comment_content}
+      = comment.comment_content
 

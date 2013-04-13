@@ -26316,3 +26316,1917 @@ Processing by PostsController#show as HTML
   Rendered layouts/_header.html.slim (0.9ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 839ms (Views: 837.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-13 12:37:35 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (487.0281ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (512.0287ms)
+  Rendered home/index.html.erb within layouts/application (1097.1ms)
+Compiled custom.css  (4160ms)  (pid 7064)
+Compiled application.css  (11ms)  (pid 7064)
+Compiled application.js  (198ms)  (pid 7064)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (109.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 6128ms (Views: 6127.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-13 13:52:14 +0800
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (503.0279ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (399.0231ms)
+  Rendered home/index.html.erb within layouts/application (1642.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (285.0ms)
+  Rendered layouts/_footer.html.erb (12.0ms)
+Completed 200 OK in 4549ms (Views: 4313.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-04-13 14:00:44 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (112.0ms)
+  Rendered f:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (1402.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1801ms (Views: 1738.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-04-13 14:00:56 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sl96aiKxykJpo8czN/ieDGFZVXA+Hg+VqY4suPzZ5A4=", "user"=>{"email"=>"ipshow@msn.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0013ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"email"=>"ipshow@msn.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (228.0130ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} update={"$set"=>{"last_sign_in_at"=>2013-04-06 05:14:21 UTC, "current_sign_in_at"=>2013-04-13 06:00:57 UTC, "sign_in_count"=>4, "updated_at"=>2013-04-13 06:00:57 UTC}} flags=[] (40.0016ms)
+Redirected to http://localhost:3333/
+Completed 302 Found in 1809ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-13 14:00:58 +0800
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (33.0021ms)
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 89ms (Views: 87.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-04-13 14:01:02 +0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (74.0039ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered posts/index.html.slim within layouts/application (369.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 635ms (Views: 611.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 14:01:06 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (26.0022ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (48.0030ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0004ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (375.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_header.html.slim (5.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 631ms (Views: 578.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:23:49 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3402.1950ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (687.0389ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (635.0369ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (292.0170ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  Rendered posts/show.html.slim within layouts/application (2090.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered layouts/_header.html.slim (30.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 7942ms (Views: 3841.2ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:25:16 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (198.0ms)
+Completed 500 Internal Server Error in 225ms
+
+NoMethodError - undefined method `url' for #<User:0x4c5ec28>:
+  (gem) mongoid-3.1.2/lib/mongoid/attributes.rb:318:in `method_missing'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/proxy.rb:143:in `method_missing'
+  app/views/posts/show.html.slim:15:in `_app_views_posts_show_html_slim__314838340_38971236'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/28223244/variables" for 127.0.0.1 at 2013-04-13 15:25:20 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:26:32 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 80ms
+
+NoMethodError - undefined method `show_user_path' for #<#<Class:0x2e48c20>:0x4a8fa40>:
+  app/views/posts/show.html.slim:16:in `_app_views_posts_show_html_slim__314838340_39122520'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/40183872/variables" for 127.0.0.1 at 2013-04-13 15:26:33 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:28:11 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (5.0011ms)
+  Rendered posts/show.html.slim within layouts/application (71.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered layouts/_header.html.slim (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 187ms (Views: 180.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-13 15:28:18 +0800
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered users/index.slim within layouts/application (209.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 372ms (Views: 290.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:29:51 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (9.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (114.0ms)
+Completed 500 Internal Server Error in 169ms
+
+NameError - undefined local variable or method `post' for #<#<Class:0x2e48c20>:0x4aac780>:
+  app/views/posts/show.html.slim:16:in `_app_views_posts_show_html_slim__314838340_39163260'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/25866036/variables" for 127.0.0.1 at 2013-04-13 15:29:51 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:30:01 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0007ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered posts/show.html.slim within layouts/application (55.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_header.html.slim (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 144ms (Views: 139.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-13 15:30:10 +0800
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered users/index.slim within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 104ms (Views: 100.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:30:23 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (4.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 63ms
+
+NameError - undefined local variable or method `user' for #<#<Class:0x2e48c20>:0x4b2ab88>:
+  app/views/posts/show.html.slim:16:in `_app_views_posts_show_html_slim__314838340_39419928'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/40344312/variables" for 127.0.0.1 at 2013-04-13 15:30:24 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:30:26 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 55ms
+
+NameError - undefined local variable or method `user' for #<#<Class:0x2e48c20>:0x4cbec88>:
+  app/views/posts/show.html.slim:16:in `_app_views_posts_show_html_slim__314838340_39419928'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/40379988/variables" for 127.0.0.1 at 2013-04-13 15:30:26 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:30:26 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (129.0071ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  Rendered posts/show.html.slim within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 203ms
+
+NameError - undefined local variable or method `user' for #<#<Class:0x2e48c20>:0x1fc5660>:
+  app/views/posts/show.html.slim:16:in `_app_views_posts_show_html_slim__314838340_39419928'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:30:27 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered posts/show.html.slim within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 66ms
+
+NameError - undefined local variable or method `user' for #<#<Class:0x2e48c20>:0x4173510>:
+  app/views/posts/show.html.slim:16:in `_app_views_posts_show_html_slim__314838340_39419928'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/posts_controller.rb:20:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/39339360/variables" for 127.0.0.1 at 2013-04-13 15:30:27 +0800
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:30:58 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered posts/show.html.slim within layouts/application (59.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_header.html.slim (6.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 168ms (Views: 161.0ms)
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:31:04 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  Rendered users/show.slim within layouts/application (27.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 182ms (Views: 175.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:31:45 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (58.0032ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0010ms)
+  Rendered posts/show.html.slim within layouts/application (124.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_header.html.slim (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 226ms (Views: 219.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:33:30 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (24.0021ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (45.0020ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0013ms)
+  Rendered posts/show.html.slim within layouts/application (101.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered layouts/_header.html.slim (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 200ms (Views: 174.0ms)
+
+
+Started GET "/users/515fab4ef5a445c852000001" for 127.0.0.1 at 2013-04-13 15:33:37 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515fab4ef5a445c852000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515fab4ef5a445c852000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515fab4ef5a445c852000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515fab4ef5a445c852000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered users/show.slim within layouts/application (8.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 87.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:34:00 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (65.0029ms)
+  Rendered posts/show.html.slim within layouts/application (144.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_header.html.slim (10.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 235.0ms)
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:34:10 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered users/show.slim within layouts/application (12.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 116ms (Views: 109.0ms)
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:34:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (73.0040ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0008ms)
+  Rendered users/show.slim within layouts/application (11.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 200ms (Views: 106.0ms)
+
+
+Started GET "/posts/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:34:40 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (70.0040ms)
+Completed 404 Not Found in 75ms
+
+Mongoid::Errors::DocumentNotFound - 
+Problem:
+  Document(s) not found for class Post with id(s) 515ed6b1f5a4450bb0000001.
+Summary:
+  When calling Post.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 515ed6b1f5a4450bb0000001 ... (1 total) and the following ids were not found: 515ed6b1f5a4450bb0000001.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.:
+  (gem) mongoid-3.1.2/lib/mongoid/criteria.rb:464:in `check_for_missing_documents!'
+  (gem) mongoid-3.1.2/lib/mongoid/criterion/findable.rb:20:in `execute_or_raise'
+  (gem) mongoid-3.1.2/lib/mongoid/criterion/findable.rb:40:in `find'
+  (gem) mongoid_slug-3.0.0/lib/mongoid/slug/criteria.rb:33:in `find'
+  (gem) mongoid-3.1.2/lib/mongoid/finders.rb:85:in `find'
+  app/controllers/posts_controller.rb:18:in `show'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__22305532__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/38776920/variables" for 127.0.0.1 at 2013-04-13 15:34:41 +0800
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:35:33 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (12.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.9998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered users/show.slim within layouts/application (47.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 284ms (Views: 241.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:35:42 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0008ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (62.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_header.html.slim (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 174ms (Views: 169.0ms)
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:36:23 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.0011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.0000ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered users/show.slim within layouts/application (59.0ms)
+Completed 500 Internal Server Error in 109ms
+
+NoMethodError - undefined method `comment_path' for #<#<Class:0x4c61cd0>:0x4ab2e88>:
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/polymorphic_routes.rb:129:in `polymorphic_url'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/polymorphic_routes.rb:135:in `polymorphic_path'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/url_helper.rb:111:in `url_for'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/url_helper.rb:242:in `link_to'
+  app/views/users/show.slim:22:in `block in _app_views_users_show_slim__1072685259_39187992'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:636:in `yield_document'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:119:in `block (2 levels) in each'
+  (gem) moped-1.4.4/lib/moped/query.rb:77:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:118:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:615:in `selecting'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:117:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:166:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `each'
+  app/views/users/show.slim:18:in `_app_views_users_show_slim__1072685259_39187992'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__938945627__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/40080804/variables" for 127.0.0.1 at 2013-04-13 15:36:23 +0800
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:36:59 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (89.0050ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (3.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0002ms)
+  Rendered users/show.slim within layouts/application (54.0ms)
+Completed 500 Internal Server Error in 168ms
+
+NameError - undefined local variable or method `post' for #<#<Class:0x4c61cd0>:0x3464bc8>:
+  app/views/users/show.slim:22:in `block in _app_views_users_show_slim__1072685259_27499032'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:636:in `yield_document'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:119:in `block (2 levels) in each'
+  (gem) moped-1.4.4/lib/moped/query.rb:77:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:118:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:615:in `selecting'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:117:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:166:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `each'
+  app/views/users/show.slim:18:in `_app_views_users_show_slim__1072685259_27499032'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__938945627__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/39993780/variables" for 127.0.0.1 at 2013-04-13 15:37:00 +0800
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:37:35 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0003ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered users/show.slim within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError - undefined method `comment_conten' for #<Comment:0x4be13d8>:
+  (gem) mongoid-3.1.2/lib/mongoid/attributes.rb:318:in `method_missing'
+  app/views/users/show.slim:22:in `block in _app_views_users_show_slim__1072685259_39129264'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:169:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:636:in `yield_document'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:119:in `block (2 levels) in each'
+  (gem) moped-1.4.4/lib/moped/query.rb:77:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `block in each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/cursor.rb:26:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) moped-1.4.4/lib/moped/query.rb:76:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:118:in `block in each'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:615:in `selecting'
+  (gem) mongoid-3.1.2/lib/mongoid/contextual/mongo.rb:117:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/targets/enumerable.rb:166:in `each'
+  (gem) mongoid-3.1.2/lib/mongoid/relations/referenced/many.rb:169:in `each'
+  app/views/users/show.slim:18:in `_app_views_users_show_slim__1072685259_39129264'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  f:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__938945627__process_action__184528476__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  (gem) mongoid-3.1.2/lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  (gem) mongoid-3.1.2/lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__97654834__call__957906074__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3-x86-mingw32/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.13/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.13/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.13/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/39864036/variables" for 127.0.0.1 at 2013-04-13 15:37:36 +0800
+
+
+Started GET "/users/515ed6b1f5a4450bb0000001" for 127.0.0.1 at 2013-04-13 15:37:43 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"515ed6b1f5a4450bb0000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0009ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"user_id"=>"515ed6b1f5a4450bb0000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (63.0043ms)
+  Rendered users/show.slim within layouts/application (85.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 235ms (Views: 229.0ms)
+
+
+Started GET "/posts/da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin" for 127.0.0.1 at 2013-04-13 15:37:52 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"}
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=posts selector={"_slugs"=>{"$in"=>["da-gong-si-de-chuang-xin-si-kao-ji-yin-yan-shen-xing-chuang-xin"]}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields=nil (8.0009ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=comments selector={"post_id"=>"515ed743f5a4450bb0000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (5.0004ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515fab4ef5a445c852000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.0001ms)
+  Rendered posts/show.html.slim within layouts/application (68.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=pokerback_development collection=users selector={"$query"=>{"_id"=>"515ed6b1f5a4450bb0000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9999ms)
+  Rendered layouts/_header.html.slim (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 157ms (Views: 146.0ms)

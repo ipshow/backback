@@ -11,7 +11,7 @@ p#notice = notice
   .post-single
     p
       img class="avatar" src="#{@post.user.avatar}" class="img-circle"
-      = @post.user.name
+      = link_to @post.user.name, @post.user
 
     h3
       = @post.title
@@ -37,7 +37,7 @@ p#notice = notice
           p
           = def_markdown(comment.comment_content)
         .span2
-          = comment.user.name
+          = link_to comment.user.name, comment.user
           img class="avatar" src="#{comment.user.avatar}" class="img-circle"
           | 发布于
           = comment.created_at.strftime("%B %d %H: %M")
