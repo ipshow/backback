@@ -7,14 +7,21 @@ p
 
 
 p
-  | User: #{@user.name}
+  h1 #{@user.name}
 p
-  | Email: #{@user.email if @user.email}
+  = @user.bio
+p
+  strong 最新主题:
+  = @user.posts.last.title
+p
+  strong 主题:
   - @user.posts.each do |post|
-    p
-      strong 主题:
+
     p
       = link_to post.title, post
+
+
+/ 显示回复的条目
   - @user.comments.each do |comment|
     p
       strong 回复:
